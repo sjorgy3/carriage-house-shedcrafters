@@ -3,383 +3,363 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Carriage House ShedCrafters | Saunas, Golf Simulators & Custom Sheds in Utah</title>
-<meta name="description" content="Custom saunas, golf simulator rooms, sheds and backyard ADUs built on-site along the Wasatch Front, from Park City to Grantsville. Licensed and insured. Free quote: 801-580-7925.">
+<title>Carriage House ShedCrafters | Custom Saunas & Golf Simulators in Utah</title>
+<meta name="description" content="Custom saunas, golf simulator rooms and backyard buildings, built on-site along the Wasatch Front from Park City to Grantsville. Licensed and insured. Free quote: 801-580-7925.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #ffffff;
-    --bg-soft: #f6f4f0;
-    --ink: #1a1a18;
-    --ink-2: #55524c;
-    --line: #e6e2db;
-    --brand: #1f4d3a;
-    --brand-dark: #163a2b;
-    --brand-tint: #e8f0eb;
-    --radius: 14px;
-    --max: 1200px;
-    --shadow: 0 1px 2px rgba(0,0,0,.04), 0 12px 32px rgba(0,0,0,.08);
+    --ink: #171614;
+    --ink-2: #5f5a52;
+    --paper: #ffffff;
+    --stone: #f4f1ec;
+    --line: #e5dfd5;
+    --copper: #b4612b;
+    --copper-dark: #974f20;
+    --copper-tint: #f8ece3;
+    --max: 1240px;
+    --shadow: 0 2px 4px rgba(0,0,0,.04), 0 18px 40px rgba(0,0,0,.10);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
-  body { font-family: Inter, system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.6; -webkit-font-smoothing: antialiased; }
   a { color: inherit; text-decoration: none; }
   img { display: block; max-width: 100%; }
-  button { font: inherit; }
-  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
-  h1, h2, h3 { line-height: 1.12; letter-spacing: -0.025em; font-weight: 800; }
-  h1 { font-size: clamp(2.3rem, 5vw, 3.6rem); }
-  h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); }
-  h3 { font-size: 1.3rem; letter-spacing: -0.015em; }
-  .eyebrow { font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--brand); }
-  .sub { font-size: 1.12rem; color: var(--ink-2); max-width: 58ch; }
-  section { padding: 96px 0; }
-  .center { text-align: center; }
-  .center .sub { margin: 14px auto 0; }
+  button { font: inherit; color: inherit; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+  .serif { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; letter-spacing: -0.01em; }
+  h1, h2 { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; line-height: 1.05; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.6rem, 5.6vw, 4.6rem); }
+  h2 { font-size: clamp(2rem, 4vw, 3.1rem); }
+  h3 { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.25; }
+  .kicker { font-size: .78rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--copper); }
+  .lead { font-size: 1.12rem; color: var(--ink-2); max-width: 56ch; }
+  section { padding: 110px 0; }
+  .head { max-width: 720px; margin-bottom: 52px; }
+  .head h2 { margin: 12px 0 14px; }
+  .head.center { text-align: center; margin-left: auto; margin-right: auto; }
+  .head.center .lead { margin: 0 auto; }
 
-  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 24px; border-radius: 10px; font-weight: 600; font-size: 1rem; border: 1.5px solid transparent; cursor: pointer; transition: background .15s, border-color .15s, transform .15s; white-space: nowrap; }
-  .btn-primary { background: var(--brand); color: #fff; }
-  .btn-primary:hover { background: var(--brand-dark); }
-  .btn-outline { border-color: var(--line); background: #fff; color: var(--ink); }
-  .btn-outline:hover { border-color: var(--ink); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 15px 26px; border-radius: 6px; font-weight: 600; font-size: 1rem; border: 1.5px solid transparent; cursor: pointer; transition: background .15s, border-color .15s, color .15s; white-space: nowrap; }
+  .btn-copper { background: var(--copper); color: #fff; }
+  .btn-copper:hover { background: var(--copper-dark); }
+  .btn-line { border-color: var(--line); background: #fff; }
+  .btn-line:hover { border-color: var(--ink); }
+  .btn-glass { border-color: rgba(255,255,255,.45); color: #fff; }
+  .btn-glass:hover { border-color: #fff; background: rgba(255,255,255,.08); }
 
-  /* Top bar + nav */
-  .topbar { background: var(--brand); color: #fff; font-size: .88rem; }
-  .topbar .wrap { display: flex; justify-content: space-between; gap: 16px; padding-top: 8px; padding-bottom: 8px; }
-  .topbar a { font-weight: 600; }
-  header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-  .nav { display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 20px; }
-  .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; }
-  .logo-mark { width: 36px; height: 36px; border-radius: 9px; background: var(--brand); color: #fff; display: grid; place-items: center; font-size: 1.05rem; }
-  .logo small { display: block; font-weight: 500; font-size: .72rem; color: var(--ink-2); letter-spacing: 0; }
-  .nav-links { display: flex; gap: 28px; font-weight: 500; font-size: .95rem; color: var(--ink-2); white-space: nowrap; }
-  .nav-links a:hover { color: var(--ink); }
-  .nav-right { display: flex; align-items: center; gap: 16px; }
-  .nav-phone { font-weight: 700; white-space: nowrap; }
-  .nav .btn { padding: 11px 18px; font-size: .93rem; }
-  .menu-btn { display: none; background: none; border: 0; cursor: pointer; padding: 6px; color: var(--ink); }
-  .mobile-menu { display: none; }
+  /* ---------- Header ---------- */
+  header { position: sticky; top: 0; z-index: 50; background: #fff; border-bottom: 1px solid var(--line); }
+  .nav { height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .brand { display: flex; flex-direction: column; line-height: 1; white-space: nowrap; }
+  .brand .serif { font-size: 1.55rem; }
+  .brand small { font-size: .66rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-2); margin-top: 4px; }
+  .links { display: flex; gap: 30px; font-size: .95rem; font-weight: 500; color: var(--ink-2); }
+  .links a:hover { color: var(--ink); }
+  .nav-right { display: flex; align-items: center; gap: 18px; }
+  .phone { font-weight: 600; white-space: nowrap; display: flex; align-items: center; gap: 8px; }
+  .nav .btn { padding: 12px 20px; font-size: .95rem; }
+  .burger { display: none; background: none; border: 0; padding: 6px; cursor: pointer; }
+  .drawer { display: none; }
 
-  /* Hero */
-  .hero { padding: 56px 0 80px; background: linear-gradient(180deg, var(--bg-soft), #fff); }
-  .hero-grid { display: grid; grid-template-columns: 1fr 470px; gap: 56px; align-items: start; }
-  .hero h1 { margin: 14px 0 18px; }
-  .hero .sub { margin-bottom: 28px; }
-  .checks { list-style: none; display: grid; gap: 10px; margin-bottom: 30px; }
-  .checks li { display: flex; gap: 10px; align-items: center; font-weight: 500; }
-  .checks li::before { content: ""; width: 22px; height: 22px; flex: none; border-radius: 50%; background: var(--brand-tint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.5 2.5L14 7.5' fill='none' stroke='%231f4d3a' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat; }
-  .hero-photos { display: grid; grid-template-columns: 1.4fr 1fr; gap: 12px; }
-  .hero-photos img { width: 100%; height: 210px; object-fit: cover; border-radius: var(--radius); }
+  /* ---------- Hero ---------- */
+  .hero { position: relative; min-height: calc(100vh - 72px); display: flex; align-items: center; color: #fff; padding: 90px 0; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; z-index: -2; background: #1d1813 url("images/sauna-interior.jpg") center/cover no-repeat; }
+  .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(15,13,11,.88) 0%, rgba(15,13,11,.72) 45%, rgba(15,13,11,.25) 100%); }
+  .hero-inner { max-width: 640px; }
+  .hero .kicker { color: #e9b48c; }
+  .hero h1 { margin: 16px 0 20px; }
+  .hero p { font-size: 1.15rem; color: rgba(255,255,255,.82); max-width: 52ch; }
+  .picker { margin-top: 36px; }
+  .picker-label { font-weight: 600; margin-bottom: 12px; }
+  .chips { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .chip { display: flex; flex-direction: column; text-align: left; border-radius: 10px; overflow: hidden; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.22); cursor: pointer; transition: transform .15s, border-color .15s, background .15s; color: #fff; padding: 0; }
+  .chip:hover { transform: translateY(-3px); border-color: #fff; background: rgba(255,255,255,.14); }
+  .chip img { width: 100%; height: 92px; object-fit: cover; }
+  .chip span { padding: 10px 12px; font-weight: 600; font-size: .95rem; display: flex; justify-content: space-between; }
+  .hero-call { margin-top: 18px; color: rgba(255,255,255,.75); font-size: .95rem; }
+  .hero-call a { color: #fff; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+  .proof { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 38px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.18); font-size: .92rem; color: rgba(255,255,255,.85); }
+  .proof span { display: flex; align-items: center; gap: 8px; }
+  .proof svg { color: #e9b48c; flex: none; }
 
-  /* Quote wizard */
-  .quote-card { background: #fff; border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); padding: 28px; position: sticky; top: 92px; }
-  .quote-card h2 { font-size: 1.45rem; letter-spacing: -0.02em; }
-  .quote-card .lede { color: var(--ink-2); font-size: .95rem; margin-top: 4px; }
-  .progress { height: 6px; background: var(--bg-soft); border-radius: 99px; margin: 20px 0 6px; overflow: hidden; }
-  .progress span { display: block; height: 100%; width: 25%; background: var(--brand); border-radius: 99px; transition: width .3s; }
-  .step-label { font-size: .8rem; color: var(--ink-2); font-weight: 500; margin-bottom: 16px; }
+  /* ---------- Why ---------- */
+  .why { background: var(--stone); padding: 70px 0; }
+  .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; }
+  .why-item svg { color: var(--copper); margin-bottom: 14px; }
+  .why-item h3 { font-size: 1.08rem; margin-bottom: 6px; }
+  .why-item p { color: var(--ink-2); font-size: .95rem; }
+
+  /* ---------- Services ---------- */
+  .svc-grid { display: grid; grid-template-columns: 1.25fr 1fr; grid-template-rows: auto auto; gap: 22px; }
+  .svc { position: relative; border-radius: 14px; overflow: hidden; color: #fff; min-height: 340px; display: flex; align-items: flex-end; isolation: isolate; }
+  .svc.big { grid-row: span 2; min-height: 700px; }
+  .svc img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: transform .6s ease; }
+  .svc:hover img { transform: scale(1.04); }
+  .svc::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,.55) 55%, rgba(0,0,0,.88) 100%); }
+  .svc-body { padding: 32px; width: 100%; }
+  .svc-body h3 { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; font-size: 2rem; letter-spacing: 0; }
+  .svc-body p { color: rgba(255,255,255,.85); margin: 6px 0 16px; max-width: 46ch; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .tags span { font-size: .8rem; padding: 5px 11px; border-radius: 99px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.22); }
+  .svc .btn { padding: 12px 20px; }
+
+  /* ---------- Process ---------- */
+  .dark { background: var(--ink); color: #fff; }
+  .dark .lead { color: rgba(255,255,255,.7); }
+  .dark .kicker { color: #e9b48c; }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(255,255,255,.1); border-radius: 14px; overflow: hidden; }
+  .step { background: var(--ink); padding: 38px 34px; }
+  .step .n { font-family: "DM Serif Display", Georgia, serif; font-size: 3rem; color: #e9b48c; line-height: 1; }
+  .step h3 { margin: 18px 0 8px; font-size: 1.2rem; }
+  .step p { color: rgba(255,255,255,.7); }
+
+  /* ---------- Work ---------- */
+  .gallery { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 220px; gap: 12px; }
+  .gallery img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
+  .gallery img:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+
+  /* ---------- Quote ---------- */
+  .quote { background: var(--stone); }
+  .quote-grid { display: grid; grid-template-columns: 1fr 560px; gap: 70px; align-items: start; }
+  .next { list-style: none; margin-top: 30px; display: grid; gap: 18px; }
+  .next li { display: grid; grid-template-columns: 34px 1fr; gap: 14px; }
+  .next b { display: block; }
+  .next span.d { color: var(--ink-2); font-size: .95rem; }
+  .next .dot { width: 34px; height: 34px; border-radius: 50%; background: #fff; border: 1px solid var(--line); display: grid; place-items: center; font-weight: 700; font-size: .9rem; color: var(--copper); }
+  .talk { margin-top: 34px; padding: 22px; border-radius: 12px; background: #fff; border: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .talk small { display: block; color: var(--ink-2); font-size: .85rem; }
+  .talk .serif { font-size: 1.7rem; line-height: 1.1; }
+  .talk-btns { display: flex; gap: 8px; }
+  .talk-btns .btn { padding: 11px 18px; }
+
+  .card { background: #fff; border-radius: 16px; box-shadow: var(--shadow); padding: 34px; }
+  .card-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .card-top h3 { font-size: 1.35rem; }
+  .card-top span { font-size: .85rem; color: var(--ink-2); font-weight: 500; white-space: nowrap; }
+  .bar { height: 4px; background: var(--stone); border-radius: 99px; margin: 16px 0 26px; overflow: hidden; }
+  .bar i { display: block; height: 100%; width: 25%; background: var(--copper); transition: width .3s; }
   .q-step { display: none; }
-  .q-step.active { display: block; animation: fade .25s ease; }
-  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
-  .q-title { font-weight: 700; font-size: 1.08rem; margin-bottom: 14px; }
-  .opts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .opt { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; text-align: left; padding: 14px; border: 1.5px solid var(--line); border-radius: 12px; background: #fff; cursor: pointer; transition: border-color .12s, background .12s; color: var(--ink); }
-  .opt:hover { border-color: var(--brand); background: var(--brand-tint); }
-  .opt.sel { border-color: var(--brand); background: var(--brand-tint); }
-  .opt .ico { font-size: 1.5rem; line-height: 1; }
-  .opt b { font-size: .97rem; }
-  .opt small { color: var(--ink-2); font-size: .8rem; }
-  .opts.list { grid-template-columns: 1fr; }
-  .opts.list .opt { flex-direction: row; align-items: center; justify-content: space-between; padding: 14px 16px; }
-  .field { margin-bottom: 12px; }
-  .field label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: 5px; }
-  .field label span { color: var(--ink-2); font-weight: 400; }
-  .field input, .field textarea { width: 100%; padding: 13px 14px; border-radius: 10px; border: 1.5px solid var(--line); font: inherit; font-size: 1rem; color: var(--ink); background: #fff; }
-  .field input:focus, .field textarea:focus { outline: none; border-color: var(--brand); }
-  .field input.err { border-color: #c0392b; }
-  .field textarea { min-height: 70px; resize: vertical; }
-  .q-actions { display: flex; gap: 10px; margin-top: 6px; }
-  .q-actions .btn-primary { flex: 1; }
-  .back { background: none; border: 0; color: var(--ink-2); font-weight: 600; cursor: pointer; padding: 10px 4px; font-size: .9rem; margin-top: 12px; }
+  .q-step.on { display: block; animation: rise .25s ease; }
+  @keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .q { font-weight: 600; font-size: 1.1rem; margin-bottom: 16px; }
+  .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .tile { padding: 0; border: 1.5px solid var(--line); border-radius: 10px; overflow: hidden; background: #fff; cursor: pointer; text-align: left; transition: border-color .12s, box-shadow .12s; }
+  .tile:hover, .tile.sel { border-color: var(--copper); box-shadow: 0 0 0 3px var(--copper-tint); }
+  .tile img { width: 100%; height: 96px; object-fit: cover; }
+  .tile .ph { height: 96px; background: var(--stone); display: grid; place-items: center; color: var(--ink-2); }
+  .tile b { display: block; padding: 10px 12px 2px; font-size: .97rem; }
+  .tile small { display: block; padding: 0 12px 11px; color: var(--ink-2); font-size: .8rem; }
+  .rows { display: grid; gap: 10px; }
+  .row { display: flex; justify-content: space-between; align-items: center; padding: 15px 16px; border: 1.5px solid var(--line); border-radius: 10px; background: #fff; cursor: pointer; font-weight: 500; text-align: left; transition: border-color .12s, box-shadow .12s; }
+  .row::after { content: "→"; color: var(--ink-2); }
+  .row:hover, .row.sel { border-color: var(--copper); box-shadow: 0 0 0 3px var(--copper-tint); }
+  .f { margin-bottom: 14px; }
+  .f label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: 6px; }
+  .f label span { font-weight: 400; color: var(--ink-2); }
+  .f input, .f textarea { width: 100%; padding: 14px; border: 1.5px solid var(--line); border-radius: 8px; font: inherit; font-size: 1rem; background: #fff; color: var(--ink); }
+  .f input:focus, .f textarea:focus { outline: none; border-color: var(--copper); box-shadow: 0 0 0 3px var(--copper-tint); }
+  .f input.err { border-color: #c0392b; }
+  .f textarea { min-height: 76px; resize: vertical; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .submit { width: 100%; margin-top: 4px; padding: 17px; font-size: 1.05rem; }
+  .fine { text-align: center; font-size: .8rem; color: var(--ink-2); margin-top: 12px; }
+  .back { background: none; border: 0; color: var(--ink-2); cursor: pointer; font-weight: 600; font-size: .9rem; margin-top: 16px; padding: 4px 0; }
   .back:hover { color: var(--ink); }
-  .q-or { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: .9rem; color: var(--ink-2); flex-wrap: wrap; }
-  .q-or a { color: var(--brand); font-weight: 700; }
-  .q-done { text-align: center; padding: 12px 0; }
-  .q-done .big { width: 56px; height: 56px; border-radius: 50%; background: var(--brand-tint); color: var(--brand); display: grid; place-items: center; margin: 0 auto 14px; font-size: 1.6rem; }
-  .q-done p { color: var(--ink-2); margin-top: 8px; }
+  .done { text-align: center; padding: 20px 0 6px; }
+  .done .ok { width: 60px; height: 60px; border-radius: 50%; background: var(--copper-tint); color: var(--copper); display: grid; place-items: center; margin: 0 auto 16px; }
+  .done p { color: var(--ink-2); margin-top: 8px; }
 
-  /* Trust strip */
-  .trust { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 26px 0; }
-  .trust .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-  .trust div { display: flex; flex-direction: column; }
-  .trust b { font-size: 1.05rem; }
-  .trust span { color: var(--ink-2); font-size: .9rem; }
-
-  /* Services */
-  .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 50px; }
-  .svc { border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: #fff; display: flex; flex-direction: column; transition: box-shadow .2s, transform .2s; }
-  .svc:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
-  .svc img { width: 100%; height: 230px; object-fit: cover; }
-  .svc-body { padding: 24px; display: flex; flex-direction: column; flex: 1; }
-  .svc-body p { color: var(--ink-2); margin: 8px 0 16px; }
-  .svc ul { list-style: none; display: grid; gap: 7px; margin-bottom: 22px; font-size: .94rem; }
-  .svc li { display: flex; gap: 8px; }
-  .svc li::before { content: "✓"; color: var(--brand); font-weight: 800; }
-  .svc .price { font-size: .88rem; color: var(--ink-2); margin-bottom: 14px; }
-  .svc .price b { color: var(--ink); }
-  .svc .btn { margin-top: auto; }
-
-  /* Process */
-  .soft { background: var(--bg-soft); }
-  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 50px; }
-  .step { background: #fff; border-radius: 18px; padding: 30px; border: 1px solid var(--line); }
-  .num { width: 40px; height: 40px; border-radius: 50%; background: var(--brand); color: #fff; display: grid; place-items: center; font-weight: 700; margin-bottom: 18px; }
-  .step p { color: var(--ink-2); margin-top: 8px; }
-
-  /* Gallery */
-  .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 44px; }
-  .gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 12px; }
-
-  /* FAQ */
-  .faq { max-width: 780px; margin: 40px auto 0; }
-  details { border-bottom: 1px solid var(--line); padding: 20px 0; }
+  /* ---------- FAQ ---------- */
+  .faq-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 70px; }
+  details { border-top: 1px solid var(--line); padding: 22px 0; }
+  details:last-child { border-bottom: 1px solid var(--line); }
   summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; font-weight: 600; font-size: 1.05rem; }
   summary::-webkit-details-marker { display: none; }
-  summary::after { content: "+"; font-size: 1.4rem; line-height: 1; color: var(--brand); transition: transform .2s; }
+  summary::after { content: "+"; font-size: 1.5rem; line-height: 1; color: var(--copper); transition: transform .2s; }
   details[open] summary::after { transform: rotate(45deg); }
   details p { color: var(--ink-2); margin-top: 10px; }
 
-  /* CTA band */
-  .cta-band { background: var(--brand); color: #fff; padding: 72px 0; }
-  .cta-band .wrap { display: flex; justify-content: space-between; align-items: center; gap: 30px; flex-wrap: wrap; }
-  .cta-band p { opacity: .85; margin-top: 8px; font-size: 1.08rem; }
-  .cta-band .btns { display: flex; gap: 12px; flex-wrap: wrap; }
-  .btn-white { background: #fff; color: var(--brand); }
-  .btn-white:hover { background: #f0f0ec; }
-  .btn-ghost-w { border-color: rgba(255,255,255,.4); color: #fff; }
-  .btn-ghost-w:hover { border-color: #fff; }
+  /* ---------- Footer ---------- */
+  .cta { position: relative; color: #fff; text-align: center; padding: 120px 0; isolation: isolate; overflow: hidden; }
+  .cta img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+  .cta::after { content: ""; position: absolute; inset: 0; background: rgba(15,13,11,.72); z-index: -1; }
+  .cta p { color: rgba(255,255,255,.8); font-size: 1.15rem; margin: 14px auto 32px; max-width: 50ch; }
+  .cta .btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  footer { background: var(--ink); color: rgba(255,255,255,.7); padding: 60px 0 40px; font-size: .92rem; }
+  .foot { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
+  footer .brand { color: #fff; margin-bottom: 14px; }
+  footer .brand small { color: rgba(255,255,255,.55); }
+  footer h4 { color: #fff; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 14px; }
+  footer nav { display: grid; gap: 8px; }
+  footer a:hover { color: #fff; }
+  .legal { margin-top: 44px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.12); font-size: .8rem; color: rgba(255,255,255,.45); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 
-  footer { padding: 40px 0 100px; font-size: .9rem; color: var(--ink-2); }
-  .foot { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
-  .foot nav { display: flex; gap: 20px; flex-wrap: wrap; }
-  .foot a:hover { color: var(--ink); }
-  .credit { margin-top: 14px; font-size: .78rem; opacity: .8; }
+  .mbar { display: none; }
 
-  .mobile-bar { display: none; }
-
-  @media (max-width: 1080px) {
-    .nav-links { display: none; }
-    .menu-btn { display: block; }
-    .mobile-menu { position: absolute; top: 70px; left: 0; right: 0; background: #fff; border-bottom: 1px solid var(--line); padding: 8px 20px 20px; flex-direction: column; box-shadow: var(--shadow); }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a { padding: 14px 0; border-bottom: 1px solid var(--line); font-weight: 600; }
-    .mobile-menu .btn { margin-top: 16px; border-bottom: 0; }
-    .hero-grid { grid-template-columns: 1fr; gap: 28px; }
-    .hero-photos { display: none; }
-    .checks { margin-bottom: 0; }
-    .quote-card { position: static; }
-    .services { grid-template-columns: 1fr; max-width: 560px; margin-left: auto; margin-right: auto; }
-    .steps { grid-template-columns: 1fr; max-width: 560px; margin-left: auto; margin-right: auto; }
-    .trust .wrap { grid-template-columns: 1fr 1fr; }
+  /* ---------- Responsive ---------- */
+  @media (max-width: 1100px) {
+    .links { display: none; }
+    .burger { display: block; }
+    .drawer { position: absolute; top: 72px; left: 0; right: 0; background: #fff; border-bottom: 1px solid var(--line); box-shadow: var(--shadow); padding: 8px 24px 22px; flex-direction: column; }
+    .drawer.open { display: flex; }
+    .drawer a { padding: 14px 0; border-bottom: 1px solid var(--line); font-weight: 600; }
+    .drawer .btn { margin-top: 16px; border: 0; }
+    .quote-grid, .faq-grid { grid-template-columns: 1fr; gap: 44px; }
+    .why-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 820px) {
+    section { padding: 80px 0; }
+    .svc-grid { grid-template-columns: 1fr; }
+    .svc, .svc.big { grid-row: auto; min-height: 0; display: block; background: var(--ink); }
+    .svc img { position: static; height: 240px; }
+    .svc::after { display: none; }
+    .svc-body { padding: 24px; }
+    .svc-body h3 { font-size: 1.7rem; }
+    .steps { grid-template-columns: 1fr; }
+    .gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; }
+    .foot { grid-template-columns: 1fr; }
   }
   @media (max-width: 640px) {
-    .wrap { padding: 0 16px; }
-    .topbar .area { display: none; }
-    .topbar .wrap { justify-content: center; }
-    .nav-right .btn, .nav-phone { display: none; }
-    .logo small { display: none; }
-    section { padding: 64px 0; }
-    .hero { padding-top: 32px; }
-    .hero-photos { display: none; }
-    .quote-card { padding: 22px 18px; }
-    .gallery { grid-template-columns: 1fr 1fr; }
-    .mobile-bar { display: grid; grid-template-columns: 1fr 1fr 1.3fr; gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); background: #fff; border-top: 1px solid var(--line); box-shadow: 0 -4px 20px rgba(0,0,0,.06); }
-    .mobile-bar .btn { padding: 12px 6px; font-size: .92rem; }
+    .wrap { padding: 0 18px; }
+    .nav-right .btn, .phone { display: none; }
+    .hero { min-height: 0; padding: 56px 0 64px; }
+    .hero::before { background: linear-gradient(180deg, rgba(15,13,11,.78), rgba(15,13,11,.88)); }
+    .chips { gap: 8px; }
+    .chip img { height: 70px; }
+    .chip span { font-size: .8rem; padding: 8px 8px; line-height: 1.25; }
+    .hero .kicker { font-size: .68rem; letter-spacing: .12em; }
+    .chip span em { display: none; }
+    .why-grid { grid-template-columns: 1fr; gap: 26px; }
+    .card { padding: 24px 18px; }
+    .two { grid-template-columns: 1fr; gap: 0; }
+    .talk { flex-direction: column; align-items: flex-start; }
+    .mbar { display: grid; grid-template-columns: 1fr 1fr 1.4fr; gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: #fff; border-top: 1px solid var(--line); padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); box-shadow: 0 -6px 24px rgba(0,0,0,.08); }
+    .mbar .btn { padding: 12px 6px; font-size: .92rem; }
+    footer { padding-bottom: 100px; }
   }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
 </style>
 </head>
 <body>
 
-<div class="topbar">
-  <div class="wrap">
-    <span class="area">Licensed & insured · Building along the Wasatch Front, Park City to Grantsville</span>
-    <span>Call or text <a data-site="phone-link" href="tel:8015807925"><span data-site="phone">801-580-7925</span></a></span>
-  </div>
-</div>
-
 <header>
   <div class="wrap nav">
-    <a href="#" class="logo"><span class="logo-mark">CH</span><span>Carriage House ShedCrafters<small>Saunas · Golf Simulators · Sheds</small></span></a>
-    <nav class="nav-links">
-      <a href="#saunas">Saunas</a>
-      <a href="#golf">Golf Simulators</a>
-      <a href="#sheds">Sheds & ADUs</a>
+    <a href="#" class="brand"><span class="serif">Carriage House</span><small>ShedCrafters · Utah</small></a>
+    <nav class="links">
+      <a href="#services">Saunas</a>
+      <a href="#services">Golf Simulators</a>
+      <a href="#services">Sheds & ADUs</a>
       <a href="#work">Our Work</a>
+      <a href="#process">How It Works</a>
       <a href="#faq">FAQ</a>
     </nav>
     <div class="nav-right">
-      <a class="nav-phone" data-site="phone-link" href="tel:8015807925"><span data-site="phone">801-580-7925</span></a>
-      <a href="#quote" class="btn btn-primary">Get a Free Quote</a>
-      <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
+      <a class="phone" data-site="tel" href="tel:8015807925"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span data-site="phone">801-580-7925</span></a>
+      <a href="#quote" class="btn btn-copper">Get a Free Quote</a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
   </div>
-  <nav class="mobile-menu" id="mobile-menu">
-    <a href="#saunas">Saunas</a>
-    <a href="#golf">Golf Simulators</a>
-    <a href="#sheds">Sheds & ADUs</a>
+  <nav class="drawer" id="drawer">
+    <a href="#services">Saunas</a>
+    <a href="#services">Golf Simulators</a>
+    <a href="#services">Sheds & ADUs</a>
     <a href="#work">Our Work</a>
+    <a href="#process">How It Works</a>
     <a href="#faq">FAQ</a>
-    <a href="#quote" class="btn btn-primary">Get a Free Quote</a>
+    <a href="#quote" class="btn btn-copper">Get a Free Quote</a>
   </nav>
 </header>
 
 <main>
-  <!-- HERO + QUOTE -->
-  <section class="hero" id="quote">
-    <div class="wrap hero-grid">
-      <div>
-        <span class="eyebrow">Custom-built in Utah</span>
-        <h1>Custom saunas & golf simulators, built right at your home.</h1>
-        <p class="sub">We design and build backyard saunas, indoor saunas and golf simulator rooms across the Wasatch Front. You work directly with the owners from the first visit to the final walkthrough.</p>
-        <ul class="checks">
-          <li>Free on-site consultation and written quote</li>
-          <li>Licensed & insured, every build is plumb, level and square</li>
-          <li>Work directly with the owners, Bryce & Scott</li>
-        </ul>
-        <div class="hero-photos">
-          <img src="images/sauna-interior.jpg" alt="Modern wooden sauna interior with heated stones">
-          <img src="images/golf.jpg" alt="Golfer hitting off a mat in an indoor practice room">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" role="img" aria-label="Wooden sauna interior with heated stones"></div>
+    <div class="wrap">
+      <div class="hero-inner">
+        <span class="kicker">Saunas · Golf Simulators · Backyard Buildings</span>
+        <h1>Custom saunas & golf simulator rooms, built at your home.</h1>
+        <p>One local builder for the whole project: design, framing, electrical and finish work. Built on-site across the Wasatch Front, by owners who answer their own phone.</p>
+
+        <div class="picker">
+          <div class="picker-label">What would you like built? Start your free quote:</div>
+          <div class="chips">
+            <button class="chip" data-start="Sauna"><img src="images/sauna-outdoor.jpg" alt="" style="object-position:center 45%"><span>Sauna <em>→</em></span></button>
+            <button class="chip" data-start="Golf Simulator"><img src="images/golf.jpg" alt=""><span>Golf Simulator <em>→</em></span></button>
+            <button class="chip" data-start="Shed / ADU"><img src="images/project-1.jpg" alt=""><span>Shed or ADU <em>→</em></span></button>
+          </div>
+          <div class="hero-call">Rather talk? Call or text <a data-site="tel" href="tel:8015807925"><span data-site="phone">801-580-7925</span></a></div>
         </div>
-      </div>
 
-      <div class="quote-card" aria-live="polite">
-        <h2>Get your free quote</h2>
-        <p class="lede">4 quick questions. Takes about 30 seconds.</p>
-        <div class="progress"><span id="q-bar"></span></div>
-        <div class="step-label" id="q-label">Step 1 of 4</div>
-
-        <form id="quote-form" novalidate>
-          <!-- Step 1 -->
-          <div class="q-step active" data-step="1">
-            <div class="q-title">What would you like built?</div>
-            <div class="opts">
-              <button type="button" class="opt" data-name="project" data-value="Sauna"><span class="ico">🔥</span><b>Sauna</b><small>Indoor or outdoor</small></button>
-              <button type="button" class="opt" data-name="project" data-value="Golf Simulator"><span class="ico">⛳</span><b>Golf Simulator</b><small>Full room build</small></button>
-              <button type="button" class="opt" data-name="project" data-value="Shed / ADU"><span class="ico">🏠</span><b>Shed or ADU</b><small>Storage, office, studio</small></button>
-              <button type="button" class="opt" data-name="project" data-value="Not sure yet"><span class="ico">💬</span><b>Not sure yet</b><small>Let's talk it through</small></button>
-            </div>
-          </div>
-
-          <!-- Step 2: options change with the project -->
-          <div class="q-step" data-step="2">
-            <div class="q-title" id="q2-title">Where will it go?</div>
-            <div class="opts list" id="q2-opts"></div>
-            <button type="button" class="back" data-back>← Back</button>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="q-step" data-step="3">
-            <div class="q-title">When would you like to start?</div>
-            <div class="opts list">
-              <button type="button" class="opt" data-name="timeline" data-value="As soon as possible"><b>As soon as possible</b></button>
-              <button type="button" class="opt" data-name="timeline" data-value="In 1–3 months"><b>In 1–3 months</b></button>
-              <button type="button" class="opt" data-name="timeline" data-value="In 3–6 months"><b>In 3–6 months</b></button>
-              <button type="button" class="opt" data-name="timeline" data-value="Just getting prices"><b>Just getting prices</b></button>
-            </div>
-            <button type="button" class="back" data-back>← Back</button>
-          </div>
-
-          <!-- Step 4 -->
-          <div class="q-step" data-step="4">
-            <div class="q-title">Where should we send your quote?</div>
-            <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name"></div>
-            <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel"></div>
-            <div class="field"><label for="f-city">City <span>(optional)</span></label><input id="f-city" name="city" autocomplete="address-level2"></div>
-            <div class="field"><label for="f-msg">Anything else? <span>(optional)</span></label><textarea id="f-msg" name="message" placeholder="Size, ceiling height, ideas…"></textarea></div>
-            <div class="q-actions"><button type="submit" class="btn btn-primary">Get My Free Quote</button></div>
-            <button type="button" class="back" data-back>← Back</button>
-          </div>
-
-          <div class="q-step q-done" data-step="5">
-            <div class="big">✓</div>
-            <h3>Thanks! Your request is in.</h3>
-            <p>Bryce or Scott will call or text you within one business day to set up your free consultation.</p>
-          </div>
-        </form>
-
-        <div class="q-or" id="q-or">
-          <span>Prefer to talk?</span>
-          <span><a data-site="phone-link" href="tel:8015807925">Call</a> or <a data-site="sms-link" href="sms:8015807925">text</a> <span data-site="phone">801-580-7925</span></span>
+        <div class="proof">
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Licensed & insured</span>
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-6 8-12a8 8 0 0 0-16 0c0 6 8 12 8 12z"/><circle cx="12" cy="10" r="3"/></svg>Park City to Grantsville</span>
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Owner-built</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TRUST -->
-  <div class="trust">
-    <div class="wrap">
-      <div><b>Licensed & insured</b><span>Fully covered, every job</span></div>
-      <div><b>Built on-site</b><span>Park City to Grantsville</span></div>
-      <div><b>Owner-run</b><span>Talk to Bryce or Scott</span></div>
-      <div><b>Free consultation</b><span>No obligation, written quote</span></div>
+  <!-- WHY -->
+  <section class="why">
+    <div class="wrap why-grid">
+      <div class="why-item">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg>
+        <h3>One builder, start to finish</h3>
+        <p>No juggling contractors. We handle framing, electrical, install and finish work.</p>
+      </div>
+      <div class="why-item">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>
+        <h3>Plumb, level & square</h3>
+        <p>Craftsman-style building that's made to last, not a kit from a big-box store.</p>
+      </div>
+      <div class="why-item">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 9V5a3 3 0 0 0-6 0v4"/><rect x="3" y="9" width="18" height="12" rx="2"/></svg>
+        <h3>Clear, written quotes</h3>
+        <p>Free on-site visit, then an itemized price, so you know exactly what you're paying for.</p>
+      </div>
+      <div class="why-item">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        <h3>Talk to the owners</h3>
+        <p>Bryce and Scott handle your project personally, from first call to final walkthrough.</p>
+      </div>
     </div>
-  </div>
+  </section>
 
   <!-- SERVICES -->
   <section id="services">
     <div class="wrap">
-      <div class="center">
-        <span class="eyebrow">What We Build</span>
-        <h2 style="margin-top:10px">Pick your project</h2>
-        <p class="sub">Every project is designed for your space and built on-site by our crew.</p>
+      <div class="head">
+        <span class="kicker">What We Build</span>
+        <h2>Built for your home and your space.</h2>
+        <p class="lead">Whether it's a backyard sauna, a basement simulator room or a workshop out back, every project is designed for you and built on-site.</p>
       </div>
-      <div class="services">
-        <article class="svc" id="saunas">
-          <img src="images/sauna-outdoor.jpg" alt="Outdoor barrel sauna on a wooden deck" style="object-position:center 40%" loading="lazy">
+      <div class="svc-grid">
+        <article class="svc big" id="saunas">
+          <img src="images/sauna-outdoor.jpg" alt="Outdoor barrel sauna on a wooden deck" loading="lazy" style="object-position:center 40%">
           <div class="svc-body">
             <h3>Custom Saunas</h3>
-            <p>Backyard sauna houses, barrel saunas and indoor saunas for basements or bathrooms.</p>
-            <ul>
-              <li>Indoor & outdoor builds</li>
-              <li>Electric or wood-fired heaters</li>
-              <li>Cedar & thermo-wood interiors</li>
-              <li>Glass doors, lighting & cold-plunge add-ons</li>
-            </ul>
-            <a href="#quote" class="btn btn-primary" data-project="Sauna">Get a Sauna Quote</a>
+            <p>Backyard sauna houses, barrel saunas and indoor saunas for basements and bathrooms. Electric or wood-fired.</p>
+            <div class="tags"><span>Outdoor & indoor</span><span>Cedar & thermo-wood</span><span>Glass doors & lighting</span><span>Cold-plunge add-ons</span></div>
+            <a href="#quote" class="btn btn-copper" data-start="Sauna">Get a sauna quote</a>
           </div>
         </article>
         <article class="svc" id="golf">
           <img src="images/golf.jpg" alt="Golfer hitting off a turf mat indoors" loading="lazy">
           <div class="svc-body">
             <h3>Golf Simulator Rooms</h3>
-            <p>Complete simulator rooms for basements, garages and bonus rooms. Bring your clubs, we handle everything else.</p>
-            <ul>
-              <li>Room layout & swing-space check</li>
-              <li>Impact screen, enclosure & projector</li>
-              <li>Launch monitor install & setup</li>
-              <li>Turf, hitting mat, lighting & seating</li>
-            </ul>
-            <a href="#quote" class="btn btn-primary" data-project="Golf Simulator">Get a Simulator Quote</a>
+            <p>Complete rooms for basements, garages and bonus rooms. Bring your clubs, we handle the rest.</p>
+            <div class="tags"><span>Screen & enclosure</span><span>Projector & launch monitor</span><span>Turf & lighting</span></div>
+            <a href="#quote" class="btn btn-copper" data-start="Golf Simulator">Get a simulator quote</a>
           </div>
         </article>
         <article class="svc" id="sheds">
           <img src="images/project-1.jpg" alt="Custom shed built by Carriage House ShedCrafters" loading="lazy">
           <div class="svc-body">
             <h3>Sheds, Offices & ADUs</h3>
-            <p>Craftsman-style sheds, workshops, backyard offices and ADUs, built on-site to outlast any big-box shed.</p>
-            <ul>
-              <li>Storage sheds & workshops</li>
-              <li>Backyard offices & she-sheds</li>
-              <li>Pool houses, ADUs & tiny homes</li>
-              <li>Old shed tear-out & haul-away</li>
-            </ul>
-            <div class="price">Standard sheds from <b>$2,190 installed</b></div>
-            <a href="#quote" class="btn btn-primary" data-project="Shed / ADU">Get a Shed Quote</a>
+            <p>Storage sheds, workshops, backyard offices and ADUs. Standard sheds from $2,190 installed.</p>
+            <a href="#quote" class="btn btn-copper" data-start="Shed / ADU">Get a shed quote</a>
           </div>
         </article>
       </div>
@@ -387,69 +367,144 @@
   </section>
 
   <!-- PROCESS -->
-  <section class="soft" id="process">
+  <section class="dark" id="process">
     <div class="wrap">
-      <div class="center">
-        <span class="eyebrow">How It Works</span>
-        <h2 style="margin-top:10px">Three simple steps</h2>
+      <div class="head">
+        <span class="kicker">How It Works</span>
+        <h2>From first call to finished room.</h2>
+        <p class="lead">A simple process with one point of contact the whole way.</p>
       </div>
       <div class="steps">
-        <div class="step"><div class="num">1</div><h3>Request a quote</h3><p>Answer 4 quick questions or give us a call. We'll set up a time to visit.</p></div>
-        <div class="step"><div class="num">2</div><h3>Free on-site visit</h3><p>We measure your space, talk through options and send you a clear written quote.</p></div>
-        <div class="step"><div class="num">3</div><h3>We build it</h3><p>Our crew builds on-site, cleans up and walks you through the finished project.</p></div>
+        <div class="step"><div class="n">01</div><h3>Tell us what you want</h3><p>Answer 4 quick questions online, or just call or text. It takes about 30 seconds.</p></div>
+        <div class="step"><div class="n">02</div><h3>Free on-site visit & quote</h3><p>We measure your space, walk through options and send a clear, written quote.</p></div>
+        <div class="step"><div class="n">03</div><h3>We build it</h3><p>Our crew builds on-site, cleans up and walks you through the finished project.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- OUR WORK -->
+  <!-- WORK -->
   <section id="work">
     <div class="wrap">
-      <div class="center">
-        <span class="eyebrow">Our Work</span>
-        <h2 style="margin-top:10px">Recent local projects</h2>
-        <p class="sub">Every project is built on-site, plumb, level and square.</p>
+      <div class="head">
+        <span class="kicker">Our Work</span>
+        <h2>Recent local projects.</h2>
+        <p class="lead">A few of the backyard buildings we've built along the Wasatch Front.</p>
       </div>
       <div class="gallery">
-        <img src="images/project-1.jpg" alt="Custom backyard building by Carriage House ShedCrafters" loading="lazy">
-        <img src="images/project-2.jpg" alt="Custom backyard building by Carriage House ShedCrafters" loading="lazy">
-        <img src="images/project-3.jpg" alt="Custom backyard building by Carriage House ShedCrafters" loading="lazy">
-        <img src="images/project-4.jpg" alt="Custom backyard building by Carriage House ShedCrafters" loading="lazy">
-        <img src="images/project-5.jpg" alt="Custom backyard building by Carriage House ShedCrafters" loading="lazy">
-        <img src="images/project-6.jpg" alt="Custom backyard building by Carriage House ShedCrafters" loading="lazy">
-        <img src="images/project-7.jpg" alt="Custom backyard building by Carriage House ShedCrafters" loading="lazy">
-        <img src="images/project-8.jpg" alt="Custom backyard building by Carriage House ShedCrafters" loading="lazy">
+        <img src="images/project-1.jpg" alt="Backyard building by Carriage House ShedCrafters" loading="lazy">
+        <img src="images/project-2.jpg" alt="Backyard building by Carriage House ShedCrafters" loading="lazy">
+        <img src="images/project-3.jpg" alt="Backyard building by Carriage House ShedCrafters" loading="lazy">
+        <img src="images/project-4.jpg" alt="Backyard building by Carriage House ShedCrafters" loading="lazy">
+        <img src="images/project-5.jpg" alt="Backyard building by Carriage House ShedCrafters" loading="lazy">
+        <img src="images/project-6.jpg" alt="Backyard building by Carriage House ShedCrafters" loading="lazy">
+        <img src="images/project-7.jpg" alt="Backyard building by Carriage House ShedCrafters" loading="lazy">
+        <img src="images/project-8.jpg" alt="Backyard building by Carriage House ShedCrafters" loading="lazy">
+        <img src="images/sauna-interior.jpg" alt="Wooden sauna interior" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote" id="quote">
+    <div class="wrap quote-grid">
+      <div>
+        <span class="kicker">Free Quote</span>
+        <h2 style="margin:12px 0 14px">Get your free quote in 30 seconds.</h2>
+        <p class="lead">No obligation and no pressure. Answer a few quick questions and we'll take it from there.</p>
+        <ul class="next">
+          <li><span class="dot">1</span><div><b>We'll reach out within 1 business day</b><span class="d">Bryce or Scott will call or text you personally.</span></div></li>
+          <li><span class="dot">2</span><div><b>Free on-site visit</b><span class="d">We measure your space and talk through options.</span></div></li>
+          <li><span class="dot">3</span><div><b>Written quote</b><span class="d">A clear, itemized price. No surprises.</span></div></li>
+        </ul>
+        <div class="talk">
+          <div><small>Rather talk now?</small><div class="serif" data-site="phone">801-580-7925</div></div>
+          <div class="talk-btns"><a data-site="tel" href="tel:8015807925" class="btn btn-copper">Call</a><a data-site="sms" href="sms:8015807925" class="btn btn-line">Text</a></div>
+        </div>
+      </div>
+
+      <div class="card" aria-live="polite">
+        <div class="card-top"><h3>Your free quote</h3><span id="q-count">Step 1 of 4</span></div>
+        <div class="bar"><i id="q-bar"></i></div>
+
+        <form id="qf" novalidate>
+          <div class="q-step on" data-step="1">
+            <div class="q">What would you like built?</div>
+            <div class="tiles">
+              <button type="button" class="tile" data-k="project" data-v="Sauna"><img src="images/sauna-outdoor.jpg" alt="" style="object-position:center 45%"><b>Sauna</b><small>Indoor or outdoor</small></button>
+              <button type="button" class="tile" data-k="project" data-v="Golf Simulator"><img src="images/golf.jpg" alt=""><b>Golf Simulator</b><small>Full room build</small></button>
+              <button type="button" class="tile" data-k="project" data-v="Shed / ADU"><img src="images/project-1.jpg" alt=""><b>Shed or ADU</b><small>Storage, office, studio</small></button>
+              <button type="button" class="tile" data-k="project" data-v="Not sure yet"><div class="ph"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><b>Not sure yet</b><small>Let's talk it through</small></button>
+            </div>
+          </div>
+
+          <div class="q-step" data-step="2">
+            <div class="q" id="q2">Where will it go?</div>
+            <div class="rows" id="q2-rows"></div>
+            <button type="button" class="back" data-back>← Back</button>
+          </div>
+
+          <div class="q-step" data-step="3">
+            <div class="q">When would you like to start?</div>
+            <div class="rows">
+              <button type="button" class="row" data-k="timeline" data-v="As soon as possible">As soon as possible</button>
+              <button type="button" class="row" data-k="timeline" data-v="In 1–3 months">In 1–3 months</button>
+              <button type="button" class="row" data-k="timeline" data-v="In 3–6 months">In 3–6 months</button>
+              <button type="button" class="row" data-k="timeline" data-v="Just getting prices">Just getting prices</button>
+            </div>
+            <button type="button" class="back" data-back>← Back</button>
+          </div>
+
+          <div class="q-step" data-step="4">
+            <div class="q">Last step: how can we reach you?</div>
+            <div class="two">
+              <div class="f"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name"></div>
+              <div class="f"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"></div>
+            </div>
+            <div class="f"><label for="f-city">City <span>(optional)</span></label><input id="f-city" name="city" autocomplete="address-level2"></div>
+            <div class="f"><label for="f-msg">Anything we should know? <span>(optional)</span></label><textarea id="f-msg" name="message" placeholder="Size, ceiling height, ideas, photos you can text us…"></textarea></div>
+            <button type="submit" class="btn btn-copper submit">Get My Free Quote</button>
+            <p class="fine">No spam. We only use your info to contact you about your project.</p>
+            <button type="button" class="back" data-back>← Back</button>
+          </div>
+
+          <div class="q-step done" data-step="5">
+            <div class="ok"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+            <h3>Thanks, your request is in!</h3>
+            <p>Bryce or Scott will call or text you within one business day. Need us sooner? Call <a data-site="tel" href="tel:8015807925" style="color:var(--copper);font-weight:600"><span data-site="phone">801-580-7925</span></a>.</p>
+          </div>
+        </form>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="soft" id="faq">
-    <div class="wrap">
-      <div class="center">
-        <span class="eyebrow">FAQ</span>
-        <h2 style="margin-top:10px">Common questions</h2>
+  <section id="faq">
+    <div class="wrap faq-grid">
+      <div class="head" style="margin:0">
+        <span class="kicker">FAQ</span>
+        <h2>Questions, answered.</h2>
+        <p class="lead">Don't see yours? Call or text <a data-site="tel" href="tel:8015807925" style="color:var(--copper);font-weight:600"><span data-site="phone">801-580-7925</span></a>.</p>
       </div>
-      <div class="faq">
-        <details><summary>How much does a custom sauna cost?</summary><p>It depends on size, indoor vs. outdoor, the wood and the heater. After a free on-site visit we send you a written, itemized quote so you know exactly what you're paying for.</p></details>
+      <div>
+        <details><summary>How much does a custom sauna cost?</summary><p>It depends on size, indoor vs. outdoor, the wood and the heater. After a free on-site visit we send a written, itemized quote so you know exactly what you're paying for.</p></details>
         <details><summary>How much space do I need for a golf simulator?</summary><p>A good rule of thumb is about 10 ft of ceiling height, 12–15 ft of width and 15–18 ft of depth. Smaller rooms can often work too. We'll measure and check your full swing during the visit.</p></details>
         <details><summary>How long does a build take?</summary><p>Most indoor saunas and simulator rooms take one to three weeks once materials arrive. Outdoor builds depend on the foundation and the weather.</p></details>
         <details><summary>Do you handle electrical and permits?</summary><p>Yes. We coordinate the electrical work and any permits your project needs, so you don't have to manage separate contractors.</p></details>
         <details><summary>Can you build a sauna inside a backyard shed?</summary><p>Yes. Backyard buildings are what we've built for years, so an outdoor sauna house, or a shed with a sauna inside, is right in our wheelhouse.</p></details>
-        <details><summary>What areas do you serve?</summary><p>We build on-site along the Wasatch Front, from Park City to Grantsville. Not sure if you're in range? Call or text 801-580-7925.</p></details>
+        <details><summary>What areas do you serve?</summary><p>We build on-site along the Wasatch Front, from Park City to Grantsville.</p></details>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="cta-band">
+  <section class="cta">
+    <img src="images/sauna-interior.jpg" alt="" loading="lazy">
     <div class="wrap">
-      <div>
-        <h2>Ready to get started?</h2>
-        <p>Get a free quote in 30 seconds, or call and talk to an owner today.</p>
-      </div>
+      <h2>Let's build something you'll use every day.</h2>
+      <p>Free on-site consultation and written quote. Talk directly with the owners.</p>
       <div class="btns">
-        <a href="#quote" class="btn btn-white">Get a Free Quote</a>
-        <a data-site="phone-link" href="tel:8015807925" class="btn btn-ghost-w">Call <span data-site="phone">801-580-7925</span></a>
+        <a href="#quote" class="btn btn-copper">Get a Free Quote</a>
+        <a data-site="tel" href="tel:8015807925" class="btn btn-glass">Call <span data-site="phone">801-580-7925</span></a>
       </div>
     </div>
   </section>
@@ -459,20 +514,30 @@
   <div class="wrap">
     <div class="foot">
       <div>
-        <b style="color:var(--ink)">Carriage House ShedCrafters</b><br>
-        8842 S 630 E, Sandy, UT 84070<br>
-        <a data-site="phone-link" href="tel:8015807925"><span data-site="phone">801-580-7925</span></a> · <a data-site="email-link" href="mailto:carriagehousesheds@gmail.com"><span data-site="email">carriagehousesheds@gmail.com</span></a>
+        <div class="brand"><span class="serif">Carriage House</span><small>ShedCrafters · Utah</small></div>
+        <p>Custom saunas, golf simulator rooms and backyard buildings, built on-site along the Wasatch Front.</p>
       </div>
-      <nav><a href="#saunas">Saunas</a><a href="#golf">Golf Simulators</a><a href="#sheds">Sheds & ADUs</a><a href="#work">Our Work</a><a href="#quote">Free Quote</a></nav>
+      <div>
+        <h4>Contact</h4>
+        <nav>
+          <a data-site="tel" href="tel:8015807925"><span data-site="phone">801-580-7925</span></a>
+          <a data-site="mail" href="mailto:carriagehousesheds@gmail.com"><span data-site="email">carriagehousesheds@gmail.com</span></a>
+          <span>8842 S 630 E, Sandy, UT 84070</span>
+        </nav>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <nav><a href="#services">Custom Saunas</a><a href="#services">Golf Simulator Rooms</a><a href="#services">Sheds, Offices & ADUs</a><a href="#quote">Free Quote</a></nav>
+      </div>
     </div>
-    <div class="credit">© <span id="year"></span> Carriage House ShedCrafters. Licensed & insured. Sauna and golf photos via Unsplash (Auroom Wellness, Chiputt Golf).</div>
+    <div class="legal"><span>© <span id="yr"></span> Carriage House ShedCrafters. Licensed & insured.</span><span>Sauna & golf photos: Unsplash (Auroom Wellness, Chiputt Golf)</span></div>
   </div>
 </footer>
 
-<div class="mobile-bar">
-  <a data-site="phone-link" href="tel:8015807925" class="btn btn-outline">Call</a>
-  <a data-site="sms-link" href="sms:8015807925" class="btn btn-outline">Text</a>
-  <a href="#quote" class="btn btn-primary">Free Quote</a>
+<div class="mbar">
+  <a data-site="tel" href="tel:8015807925" class="btn btn-line">Call</a>
+  <a data-site="sms" href="sms:8015807925" class="btn btn-line">Text</a>
+  <a href="#quote" class="btn btn-copper">Free Quote</a>
 </div>
 
 <script>
@@ -480,67 +545,69 @@
   const SITE = {
     phone: "801-580-7925",
     email: "carriagehousesheds@gmail.com",
-    // Paste a free Formspree (formspree.io) endpoint here to get leads emailed automatically.
+    // Paste a Formspree endpoint (https://formspree.io/f/xxxx) to get leads emailed automatically.
     // Leave blank and the form opens the visitor's email app instead.
     formEndpoint: ""
   };
 
   const digits = SITE.phone.replace(/\D/g, "");
-  document.querySelectorAll('[data-site="phone"]').forEach(el => el.textContent = SITE.phone);
-  document.querySelectorAll('[data-site="phone-link"]').forEach(el => el.href = "tel:" + digits);
-  document.querySelectorAll('[data-site="sms-link"]').forEach(el => el.href = "sms:" + digits);
-  document.querySelectorAll('[data-site="email"]').forEach(el => el.textContent = SITE.email);
-  document.querySelectorAll('[data-site="email-link"]').forEach(el => el.href = "mailto:" + SITE.email);
-  document.getElementById("year").textContent = new Date().getFullYear();
+  const $$ = s => document.querySelectorAll(s);
+  $$('[data-site="phone"]').forEach(el => el.textContent = SITE.phone);
+  $$('[data-site="tel"]').forEach(el => el.href = "tel:" + digits);
+  $$('[data-site="sms"]').forEach(el => el.href = "sms:" + digits);
+  $$('[data-site="email"]').forEach(el => el.textContent = SITE.email);
+  $$('[data-site="mail"]').forEach(el => el.href = "mailto:" + SITE.email);
+  document.getElementById("yr").textContent = new Date().getFullYear();
 
   // Mobile menu
-  const menuBtn = document.getElementById("menu-btn"), menu = document.getElementById("mobile-menu");
-  menuBtn.addEventListener("click", () => menuBtn.setAttribute("aria-expanded", menu.classList.toggle("open")));
-  menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => { menu.classList.remove("open"); menuBtn.setAttribute("aria-expanded", false); }));
+  const burger = document.getElementById("burger"), drawer = document.getElementById("drawer");
+  burger.addEventListener("click", () => burger.setAttribute("aria-expanded", drawer.classList.toggle("open")));
+  drawer.querySelectorAll("a").forEach(a => a.addEventListener("click", () => { drawer.classList.remove("open"); burger.setAttribute("aria-expanded", false); }));
 
   // ===== Quote wizard =====
   const STEP2 = {
-    "Sauna": { title: "What kind of sauna?", opts: ["Outdoor / backyard", "Indoor (basement, bathroom)", "Not sure yet"] },
-    "Golf Simulator": { title: "Where will the simulator go?", opts: ["Basement", "Garage", "Bonus room / other", "Not sure yet"] },
-    "Shed / ADU": { title: "What are you looking for?", opts: ["Storage shed", "Office, studio or workshop", "ADU / tiny home", "Not sure yet"] },
-    "Not sure yet": { title: "What are you most interested in?", opts: ["Sauna", "Golf simulator", "Shed or backyard building", "A combination"] }
+    "Sauna": ["What kind of sauna?", ["Outdoor / backyard", "Indoor (basement, bathroom)", "Not sure yet"]],
+    "Golf Simulator": ["Where will the simulator go?", ["Basement", "Garage", "Bonus room / other", "Not sure yet"]],
+    "Shed / ADU": ["What are you looking for?", ["Storage shed", "Office, studio or workshop", "ADU / tiny home", "Not sure yet"]],
+    "Not sure yet": ["What are you most interested in?", ["Sauna", "Golf simulator", "Shed or backyard building", "A combination"]]
   };
-  const form = document.getElementById("quote-form");
+  const form = document.getElementById("qf");
   const data = {};
   let step = 1;
 
   function show(n) {
     step = n;
-    form.querySelectorAll(".q-step").forEach(s => s.classList.toggle("active", +s.dataset.step === n));
+    form.querySelectorAll(".q-step").forEach(s => s.classList.toggle("on", +s.dataset.step === n));
     document.getElementById("q-bar").style.width = Math.min(n, 4) * 25 + "%";
-    document.getElementById("q-label").textContent = n <= 4 ? `Step ${n} of 4` : "Done";
-    if (n === 4) setTimeout(() => document.getElementById("f-name").focus({ preventScroll: true }), 50);
+    document.getElementById("q-count").textContent = n <= 4 ? `Step ${n} of 4` : "Done";
+    if (n === 4 && matchMedia("(min-width: 641px)").matches) setTimeout(() => form.name.focus({ preventScroll: true }), 60);
   }
 
-  function buildStep2() {
-    const cfg = STEP2[data.project];
-    document.getElementById("q2-title").textContent = cfg.title;
-    document.getElementById("q2-opts").innerHTML = cfg.opts
-      .map(o => `<button type="button" class="opt${data.type === o ? " sel" : ""}" data-name="type" data-value="${o}"><b>${o}</b></button>`).join("");
-  }
-
-  function choose(name, value) {
-    if (name === "project" && data.project !== value) delete data.type;
-    data[name] = value;
-    form.querySelectorAll(`.opt[data-name="${name}"]`).forEach(b => b.classList.toggle("sel", b.dataset.value === value));
-    if (name === "project") { buildStep2(); show(2); }
-    else if (name === "type") show(3);
-    else if (name === "timeline") show(4);
+  function pick(k, v) {
+    if (k === "project" && data.project !== v) delete data.type;
+    data[k] = v;
+    form.querySelectorAll(`[data-k="${k}"]`).forEach(b => b.classList.toggle("sel", b.dataset.v === v));
+    if (k === "project") {
+      const [title, opts] = STEP2[v];
+      document.getElementById("q2").textContent = title;
+      document.getElementById("q2-rows").innerHTML = opts.map(o => `<button type="button" class="row" data-k="type" data-v="${o}">${o}</button>`).join("");
+      show(2);
+    } else if (k === "type") show(3);
+    else if (k === "timeline") show(4);
   }
 
   form.addEventListener("click", e => {
-    const opt = e.target.closest(".opt");
-    if (opt) return choose(opt.dataset.name, opt.dataset.value);
+    const b = e.target.closest("[data-k]");
+    if (b) return pick(b.dataset.k, b.dataset.v);
     if (e.target.closest("[data-back]")) show(step - 1);
   });
 
-  // Service "Get a ... Quote" buttons jump straight to step 2
-  document.querySelectorAll("[data-project]").forEach(btn => btn.addEventListener("click", () => choose("project", btn.dataset.project)));
+  // Hero chips and service buttons start the quote with the project already chosen
+  $$("[data-start]").forEach(b => b.addEventListener("click", e => {
+    e.preventDefault();
+    pick("project", b.dataset.start);
+    document.getElementById("quote").scrollIntoView({ behavior: "smooth" });
+  }));
 
   form.addEventListener("submit", async e => {
     e.preventDefault();
@@ -560,7 +627,6 @@
       window.location.href = `mailto:${SITE.email}?subject=${encodeURIComponent("Quote request: " + (lead.project || ""))}&body=${encodeURIComponent(body)}`;
     }
     show(5);
-    document.getElementById("q-or").style.display = "none";
   });
 </script>
 </body>

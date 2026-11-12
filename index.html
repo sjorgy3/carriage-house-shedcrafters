@@ -55,7 +55,7 @@
   .brand { display: flex; flex-direction: column; line-height: 1; white-space: nowrap; }
   .brand .serif { font-size: 1.55rem; }
   .brand small { font-size: .66rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-2); margin-top: 4px; }
-  .links { display: flex; gap: 30px; font-size: .95rem; font-weight: 500; color: var(--ink-2); }
+  .links { display: flex; gap: 24px; white-space: nowrap; font-size: .95rem; font-weight: 500; color: var(--ink-2); }
   .links a:hover { color: var(--ink); }
   .nav-right { display: flex; align-items: center; gap: 18px; }
   .phone { font-weight: 600; white-space: nowrap; display: flex; align-items: center; gap: 8px; }
@@ -104,6 +104,10 @@
   .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
   .tags span { font-size: .8rem; padding: 5px 11px; border-radius: 99px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.22); }
   .svc .btn { padding: 12px 20px; }
+  .svc-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+  .design-note { display: none; margin: -10px 0 20px; padding: 12px 14px; border-radius: 8px; background: var(--copper-tint); font-size: .88rem; color: var(--ink-2); }
+  .design-note b { color: var(--ink); display: block; }
+  .design-note a { color: var(--copper); font-weight: 600; }
 
   /* ---------- Process ---------- */
   .dark { background: var(--ink); color: #fff; }
@@ -199,7 +203,7 @@
   .mbar { display: none; }
 
   /* ---------- Responsive ---------- */
-  @media (max-width: 1100px) {
+  @media (max-width: 1180px) {
     .links { display: none; }
     .burger { display: block; }
     .drawer { position: absolute; top: 72px; left: 0; right: 0; background: #fff; border-bottom: 1px solid var(--line); box-shadow: var(--shadow); padding: 8px 24px 22px; flex-direction: column; }
@@ -251,8 +255,8 @@
       <a href="#services">Saunas</a>
       <a href="#services">Golf Simulators</a>
       <a href="#services">Sheds & ADUs</a>
+      <a href="build.html">3D Designer</a>
       <a href="#work">Our Work</a>
-      <a href="#process">How It Works</a>
       <a href="#faq">FAQ</a>
     </nav>
     <div class="nav-right">
@@ -265,6 +269,7 @@
     <a href="#services">Saunas</a>
     <a href="#services">Golf Simulators</a>
     <a href="#services">Sheds & ADUs</a>
+    <a href="build.html">3D Designer</a>
     <a href="#work">Our Work</a>
     <a href="#process">How It Works</a>
     <a href="#faq">FAQ</a>
@@ -289,7 +294,7 @@
             <button class="chip" data-start="Golf Simulator"><img src="images/golf.jpg" alt=""><span>Golf Simulator <em>→</em></span></button>
             <button class="chip" data-start="Shed / ADU"><img src="images/project-1.jpg" alt=""><span>Shed or ADU <em>→</em></span></button>
           </div>
-          <div class="hero-call">Rather talk? Call or text <a data-site="tel" href="tel:8015807925"><span data-site="phone">801-580-7925</span></a></div>
+          <div class="hero-call"><a href="build.html">Design your sauna or simulator in 3D</a> · or call/text <a data-site="tel" href="tel:8015807925"><span data-site="phone">801-580-7925</span></a></div>
         </div>
 
         <div class="proof">
@@ -342,7 +347,7 @@
             <h3>Custom Saunas</h3>
             <p>Backyard sauna houses, barrel saunas and indoor saunas for basements and bathrooms. Electric or wood-fired.</p>
             <div class="tags"><span>Outdoor & indoor</span><span>Cedar & thermo-wood</span><span>Glass doors & lighting</span><span>Cold-plunge add-ons</span></div>
-            <a href="#quote" class="btn btn-copper" data-start="Sauna">Get a sauna quote</a>
+            <div class="svc-btns"><a href="#quote" class="btn btn-copper" data-start="Sauna">Get a sauna quote</a><a href="build.html" class="btn btn-glass">Design in 3D</a></div>
           </div>
         </article>
         <article class="svc" id="golf">
@@ -351,7 +356,7 @@
             <h3>Golf Simulator Rooms</h3>
             <p>Complete rooms for basements, garages and bonus rooms. Bring your clubs, we handle the rest.</p>
             <div class="tags"><span>Screen & enclosure</span><span>Projector & launch monitor</span><span>Turf & lighting</span></div>
-            <a href="#quote" class="btn btn-copper" data-start="Golf Simulator">Get a simulator quote</a>
+            <div class="svc-btns"><a href="#quote" class="btn btn-copper" data-start="Golf Simulator">Get a simulator quote</a><a href="build.html?mode=golf" class="btn btn-glass">Design in 3D</a></div>
           </div>
         </article>
         <article class="svc" id="sheds">
@@ -425,6 +430,7 @@
       <div class="card" aria-live="polite">
         <div class="card-top"><h3>Your free quote</h3><span id="q-count">Step 1 of 4</span></div>
         <div class="bar"><i id="q-bar"></i></div>
+        <div class="design-note" id="design-note"><b>Your 3D design</b><span id="design-text"></span> · <a href="build.html">Edit</a></div>
 
         <form id="qf" novalidate>
           <div class="q-step on" data-step="1">
@@ -609,6 +615,15 @@
     document.getElementById("quote").scrollIntoView({ behavior: "smooth" });
   }));
 
+  // Arriving from the 3D designer: pre-fill the project and show the design
+  const params = new URLSearchParams(location.search);
+  if (params.get("design")) {
+    data.design = params.get("design");
+    document.getElementById("design-text").textContent = data.design;
+    document.getElementById("design-note").style.display = "block";
+  }
+  if (STEP2[params.get("project")]) pick("project", params.get("project"));
+
   form.addEventListener("submit", async e => {
     e.preventDefault();
     const name = form.name.value.trim(), phone = form.phone.value.trim();
@@ -617,7 +632,7 @@
     form.phone.classList.toggle("err", !phoneOk);
     if (!name || !phoneOk) return;
 
-    const lead = { project: data.project, details: data.type, timeline: data.timeline, name, phone, city: form.city.value.trim(), message: form.message.value.trim() };
+    const lead = { project: data.project, design: data.design, details: data.type, timeline: data.timeline, name, phone, city: form.city.value.trim(), message: form.message.value.trim() };
     if (SITE.formEndpoint) {
       try {
         await fetch(SITE.formEndpoint, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(lead) });

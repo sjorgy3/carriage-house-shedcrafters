@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carriage House ShedCrafters | Saunas, Golf Simulators & Custom Sheds in Utah</title>
+<meta name="description" content="Custom saunas, golf simulator rooms, sheds and backyard ADUs built on-site along the Wasatch Front, from Park City to Grantsville. Licensed and insured. Free quote: 801-580-7925.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+  /* ===== EDIT THESE: business details live in the SITE config in the script at the bottom ===== */
+  :root {
+    --bg: #0f0f0e;
+    --bg-2: #171614;
+    --card: #1e1c19;
+    --line: #2e2b27;
+    --text: #f3efe8;
+    --muted: #a8a197;
+    --cedar: #d08a4c;
+    --cedar-2: #e8a76a;
+    --turf: #5fb37a;
+    --radius: 18px;
+    --max: 1180px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body { font-family: Inter, system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  img, svg { display: block; max-width: 100%; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+  h1, h2, h3 { font-family: Fraunces, Georgia, serif; font-weight: 600; line-height: 1.1; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); }
+  h2 { font-size: clamp(1.9rem, 4vw, 2.9rem); }
+  h3 { font-size: 1.35rem; }
+  .eyebrow { font-size: .8rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--cedar-2); }
+  .lead { font-size: 1.15rem; color: var(--muted); max-width: 60ch; }
+  section { padding: 100px 0; }
+
+  /* Buttons */
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; border-radius: 999px; font-weight: 600; font-size: 1rem; border: 1px solid transparent; cursor: pointer; transition: transform .15s, background .2s, border-color .2s; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary { background: var(--cedar); color: #1a120a; }
+  .btn-primary:hover { background: var(--cedar-2); }
+  .btn-ghost { border-color: var(--line); background: rgba(255,255,255,.03); }
+  .btn-ghost:hover { border-color: var(--muted); }
+
+  /* Nav */
+  header { position: fixed; inset: 0 0 auto 0; z-index: 50; transition: background .3s, border-color .3s; border-bottom: 1px solid transparent; }
+  header.scrolled { background: rgba(15,15,14,.85); backdrop-filter: blur(14px); border-color: var(--line); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.05rem; white-space: nowrap; }
+  .logo-mark { width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, var(--cedar), var(--turf)); display: grid; place-items: center; color: #111; font-family: Fraunces, serif; }
+  .nav-links { display: flex; gap: 26px; white-space: nowrap; font-size: .95rem; color: var(--muted); }
+  .nav-links a:hover { color: var(--text); }
+  .nav-cta { display: flex; gap: 12px; align-items: center; }
+  .nav-phone { font-weight: 600; font-size: .95rem; white-space: nowrap; }
+  .nav .btn { white-space: nowrap; }
+  @media (max-width: 1180px) { .nav-phone { display: none; } }
+  .nav .btn { padding: 11px 20px; font-size: .92rem; }
+  .menu-btn { display: none; background: none; border: 0; color: var(--text); cursor: pointer; padding: 8px; }
+  .mobile-menu { display: none; }
+
+  /* Hero */
+  .hero { min-height: 100vh; display: grid; align-items: center; padding: 120px 0 80px; position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: -20%; background:
+      radial-gradient(40% 45% at 15% 35%, rgba(208,138,76,.22), transparent 70%),
+      radial-gradient(40% 45% at 90% 70%, rgba(95,179,122,.16), transparent 70%); z-index: -1; }
+  .hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 60px; align-items: center; }
+  .hero h1 em { font-style: normal; background: linear-gradient(90deg, var(--cedar-2), var(--turf)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero p.lead { margin: 22px 0 34px; }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .trust { display: flex; gap: 28px; margin-top: 44px; flex-wrap: wrap; color: var(--muted); font-size: .9rem; }
+  .trust strong { display: block; color: var(--text); font-size: 1.5rem; font-family: Fraunces, serif; }
+  .hero-cards { display: grid; gap: 18px; }
+  .path { display: grid; grid-template-columns: 120px 1fr; gap: 20px; align-items: center; padding: 18px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); transition: border-color .2s, transform .2s; }
+  .path:hover { transform: translateX(6px); border-color: var(--cedar); }
+  .path.golf:hover { border-color: var(--turf); }
+  .path-art { aspect-ratio: 1; border-radius: 12px; overflow: hidden; }
+  .path h3 { margin-bottom: 4px; }
+  .path p { color: var(--muted); font-size: .95rem; }
+  .path .go { margin-top: 8px; font-weight: 600; font-size: .9rem; color: var(--cedar-2); }
+  .path.golf .go { color: var(--turf); }
+
+  /* Service sections */
+  .service { border-top: 1px solid var(--line); }
+  .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .service.alt .service-art { order: 2; }
+  .service-art { border-radius: 24px; overflow: hidden; border: 1px solid var(--line); aspect-ratio: 4/3.4; }
+  .service h2 { margin: 12px 0 18px; }
+  .feature-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; margin: 30px 0 34px; }
+  .feature-list li { display: flex; gap: 10px; font-size: .97rem; }
+  .feature-list li::before { content: ""; flex: none; width: 20px; height: 20px; margin-top: 2px; border-radius: 50%; background: rgba(208,138,76,.18) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.5 2.5L14 7.5' fill='none' stroke='%23e8a76a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat; }
+  .golf-sec .feature-list li::before { background-color: rgba(95,179,122,.18); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.5 2.5L14 7.5' fill='none' stroke='%235fb37a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+  .golf-sec .eyebrow { color: var(--turf); }
+  .btn-turf { background: var(--turf); color: #0b1a10; }
+  .btn-turf:hover { background: #77c790; }
+  .tiers { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 30px; }
+  .tier { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); font-size: .85rem; color: var(--muted); }
+  .tier b { color: var(--text); font-weight: 600; }
+
+  /* Process */
+  .process { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .center { text-align: center; }
+  .center .lead { margin: 16px auto 0; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 56px; counter-reset: step; }
+  .step { padding: 28px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); }
+  .step::before { counter-increment: step; content: "0" counter(step); font-family: Fraunces, serif; font-size: 2rem; color: var(--cedar-2); display: block; margin-bottom: 14px; }
+  .step h3 { font-size: 1.15rem; margin-bottom: 8px; }
+  .step p { color: var(--muted); font-size: .95rem; }
+
+
+  .sheds-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: center; }
+  .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 50px; }
+  .gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 14px; border: 1px solid var(--line); background: var(--card); }
+
+  /* FAQ */
+  .faq { max-width: 800px; margin: 50px auto 0; }
+  details { border-bottom: 1px solid var(--line); padding: 22px 0; }
+  summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; font-weight: 600; font-size: 1.08rem; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-size: 1.5rem; line-height: 1; color: var(--cedar-2); transition: transform .2s; }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p { color: var(--muted); margin-top: 12px; }
+
+  /* Quote */
+  .quote { background: linear-gradient(160deg, #20170f 0%, var(--bg) 55%, #0f1a13 100%); border-top: 1px solid var(--line); }
+  .quote-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start; }
+  .quote-info h2 { margin: 12px 0 18px; }
+  .contact-rows { margin-top: 36px; display: grid; gap: 16px; }
+  .contact-row { display: flex; gap: 14px; align-items: center; padding: 16px 18px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.02); }
+  .contact-row .ico { width: 40px; height: 40px; border-radius: 10px; background: rgba(208,138,76,.15); display: grid; place-items: center; color: var(--cedar-2); flex: none; }
+  .contact-row small { display: block; color: var(--muted); font-size: .8rem; }
+  form { background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 34px; display: grid; gap: 18px; }
+  .choice { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .choice input { position: absolute; opacity: 0; pointer-events: none; }
+  .choice label { display: block; text-align: center; padding: 14px 8px; border: 1px solid var(--line); border-radius: 12px; cursor: pointer; font-weight: 600; font-size: .92rem; transition: border-color .15s, background .15s; }
+  .choice input:checked + label { border-color: var(--cedar); background: rgba(208,138,76,.12); }
+  .choice input:focus-visible + label { outline: 2px solid var(--cedar-2); outline-offset: 2px; }
+  .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .field label { display: block; font-size: .85rem; color: var(--muted); margin-bottom: 6px; font-weight: 500; }
+  .field input, .field select, .field textarea { width: 100%; padding: 14px 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg); color: var(--text); font: inherit; font-size: 1rem; }
+  .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--cedar); }
+  .field textarea { min-height: 100px; resize: vertical; }
+  .legend { font-size: .85rem; color: var(--muted); font-weight: 500; margin-bottom: 8px; }
+  form .btn { justify-content: center; width: 100%; padding: 17px; font-size: 1.05rem; }
+  .fine { font-size: .82rem; color: var(--muted); text-align: center; }
+  .success { display: none; text-align: center; padding: 40px 10px; }
+  .success h3 { margin-bottom: 10px; }
+  .success p { color: var(--muted); }
+
+  footer { padding: 50px 0 110px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+  .foot { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center; }
+  .foot nav { display: flex; gap: 22px; }
+  .foot a:hover { color: var(--text); }
+
+  /* Sticky mobile action bar */
+  .mobile-bar { display: none; }
+
+  /* Reveal on scroll */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+  @media (max-width: 1060px) {
+    .nav-links, .nav-phone { display: none; }
+    .menu-btn { display: block; }
+    .nav-cta .btn { display: none; }
+    .mobile-menu { position: fixed; inset: 72px 0 auto 0; background: rgba(15,15,14,.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); padding: 12px 20px 24px; flex-direction: column; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 1.1rem; }
+    .mobile-menu .btn { margin-top: 18px; justify-content: center; border-bottom: 0; }
+    .hero-grid, .service-grid, .quote-grid { grid-template-columns: 1fr; gap: 40px; }
+    .service.alt .service-art { order: 0; }
+    .steps { grid-template-columns: 1fr 1fr; }
+    .sheds-grid { grid-template-columns: 1fr; gap: 30px; }
+    .gallery { grid-template-columns: 1fr 1fr; }
+    section { padding: 72px 0; }
+    .hero { min-height: auto; padding-top: 110px; }
+  }
+  @media (max-width: 600px) {
+    .wrap { padding: 0 16px; }
+    .path { grid-template-columns: 84px 1fr; gap: 14px; padding: 14px; }
+    .feature-list, .row-2 { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; }
+    form { padding: 22px; }
+    .choice label { font-size: .85rem; padding: 12px 4px; }
+    .hero-actions .btn { flex: 1 1 100%; justify-content: center; white-space: nowrap; }
+    .mobile-bar { display: grid; grid-template-columns: 1fr 1.4fr; gap: 10px; position: fixed; inset: auto 0 0 0; z-index: 60; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: rgba(15,15,14,.94); backdrop-filter: blur(12px); border-top: 1px solid var(--line); }
+    .mobile-bar .btn { justify-content: center; padding: 13px; }
+  }
+</style>
+</head>
+<body>
+
+<header id="top-header">
+  <div class="wrap nav">
+    <a href="#" class="logo"><span class="logo-mark">C</span><span data-site="name">Carriage House ShedCrafters</span></a>
+    <nav class="nav-links">
+      <a href="#saunas">Saunas</a>
+      <a href="#golf">Golf Simulators</a>
+      <a href="#sheds">Sheds & ADUs</a>
+      <a href="#work">Our Work</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" data-site="phone-link" href="tel:8015807925">801-580-7925</a>
+      <a href="#quote" class="btn btn-primary">Free Quote</a>
+      <button class="menu-btn" aria-label="Open menu" aria-expanded="false" id="menu-btn">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu">
+    <a href="#saunas">Saunas</a>
+    <a href="#golf">Golf Simulators</a>
+    <a href="#sheds">Sheds & ADUs</a>
+    <a href="#work">Our Work</a>
+    <a href="#process">How It Works</a>
+    <a href="#faq">FAQ</a>
+    <a href="#quote" class="btn btn-primary">Get a Free Quote</a>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <span class="eyebrow">Utah builders · Nobody builds better</span>
+        <h1 style="margin-top:14px">Your home, upgraded with a <em>sauna</em> or <em>golf simulator</em>.</h1>
+        <p class="lead">Carriage House ShedCrafters designs and builds custom saunas and golf simulator rooms on-site across the Wasatch Front. We handle planning, framing, electrical, finish work and setup, and every build is plumb, level and square.</p>
+        <div class="hero-actions">
+          <a href="#quote" class="btn btn-primary">Get a Free Quote →</a>
+          <a data-site="phone-link" href="tel:8015807925" class="btn btn-ghost">Call <span data-site="phone">801-580-7925</span></a>
+        </div>
+        <div class="trust">
+          <div><strong>Licensed</strong>& insured</div>
+          <div><strong>Built on-site</strong>Park City to Grantsville</div>
+          <div><strong>Owner-run</strong>talk to Bryce or Scott</div>
+        </div>
+      </div>
+
+      <div class="hero-cards reveal">
+        <a href="#saunas" class="path">
+          <div class="path-art">
+            <svg viewBox="0 0 120 120"><defs><linearGradient id="sw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e3a36a"/><stop offset="1" stop-color="#9c5a2a"/></linearGradient></defs><rect width="120" height="120" fill="url(#sw)"/><g stroke="#7a4420" stroke-opacity=".45" stroke-width="2"><path d="M0 22h120M0 44h120M0 66h120M0 88h120M0 110h120"/></g><rect x="14" y="70" width="92" height="12" rx="2" fill="#6e3c1b"/><rect x="14" y="40" width="92" height="10" rx="2" fill="#7d4622" opacity=".8"/><g fill="#fff" opacity=".55"><path d="M42 30c-4-6 4-8 0-14" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M60 30c-4-6 4-8 0-14" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M78 30c-4-6 4-8 0-14" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/></g></svg>
+          </div>
+          <div>
+            <h3>Custom Saunas</h3>
+            <p>Indoor, outdoor and barrel saunas built from premium cedar.</p>
+            <div class="go">Explore saunas →</div>
+          </div>
+        </a>
+        <a href="#golf" class="path golf">
+          <div class="path-art">
+            <svg viewBox="0 0 120 120"><rect width="120" height="120" fill="#16211a"/><rect x="16" y="14" width="88" height="62" rx="3" fill="#2f6b45"/><path d="M16 60c22-10 40-4 60-14s28-4 28-4v34H16z" fill="#3f8a5a"/><circle cx="84" cy="34" r="8" fill="#f2d78a" opacity=".85"/><rect x="0" y="86" width="120" height="34" fill="#4ea16a"/><rect x="48" y="90" width="24" height="8" rx="2" fill="#2f6b45"/><circle cx="60" cy="88" r="3.5" fill="#fff"/></svg>
+          </div>
+          <div>
+            <h3>Golf Simulators</h3>
+            <p>Full simulator rooms for basements, garages and bonus rooms.</p>
+            <div class="go">Explore simulators →</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAUNAS -->
+  <section id="saunas" class="service">
+    <div class="wrap service-grid">
+      <div class="service-art reveal">
+        <svg viewBox="0 0 480 408" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%"><defs><linearGradient id="w1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c98549"/><stop offset="1" stop-color="#7b4220"/></linearGradient><radialGradient id="glow" cx=".5" cy=".3" r=".6"><stop offset="0" stop-color="#ffcf8f" stop-opacity=".55"/><stop offset="1" stop-color="#ffcf8f" stop-opacity="0"/></radialGradient></defs><rect width="480" height="408" fill="url(#w1)"/><g stroke="#5c3015" stroke-opacity=".35" stroke-width="2">
+          <path d="M0 34h480M0 68h480M0 102h480M0 136h480M0 170h480M0 204h480M0 238h480M0 272h480M0 306h480M0 340h480M0 374h480"/></g><rect width="480" height="408" fill="url(#glow)"/><rect x="40" y="250" width="400" height="26" rx="4" fill="#5a2f14"/><rect x="40" y="276" width="400" height="10" fill="#3f200c" opacity=".7"/><rect x="40" y="170" width="290" height="22" rx="4" fill="#64361a"/><rect x="360" y="150" width="80" height="100" rx="6" fill="#2b2420"/><g fill="#6d6560"><circle cx="378" cy="146" r="10"/><circle cx="398" cy="142" r="12"/><circle cx="420" cy="147" r="10"/></g><rect x="60" y="40" width="120" height="90" rx="6" fill="#ffe3b5" opacity=".25"/><path d="M370 120c-8-12 8-16 0-28M398 116c-8-12 8-16 0-28M424 120c-8-12 8-16 0-28" stroke="#fff" stroke-opacity=".5" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Saunas</span>
+        <h2>A spa-quality sauna, built for your space.</h2>
+        <p class="lead">From a compact indoor sauna in a basement to a freestanding outdoor build in the backyard, we handle design, framing, electrical, heater install and finish carpentry.</p>
+        <ul class="feature-list">
+          <li>Indoor & outdoor builds</li>
+          <li>Barrel & cabin styles</li>
+          <li>Electric or wood-fired heaters</li>
+          <li>Cedar, hemlock & thermo-wood</li>
+          <li>Glass doors & LED lighting</li>
+          <li>Cold-plunge add-ons</li>
+        </ul>
+        <div class="tiers"><span class="tier"><b>2–4 person</b> compact</span><span class="tier"><b>4–6 person</b> family</span><span class="tier"><b>Outdoor</b> backyard retreat</span></div>
+        <a href="#quote" data-project="Sauna" class="btn btn-primary">Get a Sauna Quote →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOLF -->
+  <section id="golf" class="service alt golf-sec">
+    <div class="wrap service-grid">
+      <div class="service-art reveal">
+        <svg viewBox="0 0 480 408" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc4e6"/><stop offset="1" stop-color="#cfe9d3"/></linearGradient></defs><rect width="480" height="408" fill="#121a15"/><rect x="50" y="34" width="380" height="230" rx="6" fill="url(#sky)"/><path d="M50 200c80-40 150-10 220-40s160-10 160-10v114H50z" fill="#4c9a63"/><path d="M50 230c90-20 200 0 380-20v54H50z" fill="#3b7f50"/><rect x="300" y="150" width="2" height="34" fill="#fff"/><path d="M302 150l18 6-18 6z" fill="#e35d4f"/><ellipse cx="301" cy="186" rx="26" ry="6" fill="#62b77d"/><rect x="0" y="300" width="480" height="108" fill="#3f8a5a"/><rect x="190" y="316" width="100" height="40" rx="4" fill="#2c6a43"/><circle cx="240" cy="312" r="7" fill="#fff"/><rect x="214" y="370" width="52" height="16" rx="4" fill="#1d2620"/><circle cx="240" cy="378" r="3" fill="#5fb37a"/><path d="M50 34L0 0M430 34L480 0M50 264L0 300M430 264L480 300" stroke="#26322a" stroke-width="2"/></svg>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Golf Simulators</span>
+        <h2>Play your favorite courses all year long.</h2>
+        <p class="lead">We build complete simulator rooms: room layout, framing, impact screen and enclosure, projector mounting, turf, hitting mat and launch monitor setup. You show up with your clubs.</p>
+        <ul class="feature-list">
+          <li>Basement, garage & bonus rooms</li>
+          <li>Impact screen & enclosure</li>
+          <li>Projector & launch monitor install</li>
+          <li>Premium turf & hitting mats</li>
+          <li>Lighting, sound & seating</li>
+          <li>Ceiling height & swing check</li>
+        </ul>
+        <div class="tiers"><span class="tier"><b>Starter</b> garage setup</span><span class="tier"><b>Pro</b> dedicated room</span><span class="tier"><b>Ultimate</b> full lounge</span></div>
+        <a href="#quote" data-project="Golf Simulator" class="btn btn-turf">Get a Simulator Quote →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="process">
+    <div class="wrap">
+      <div class="center reveal">
+        <span class="eyebrow">How It Works</span>
+        <h2 style="margin-top:12px">From idea to finished room in 4 steps</h2>
+        <p class="lead">A clear process with no surprises and one point of contact the whole way.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><h3>Free consultation</h3><p>We visit your home, measure the space and talk through what you want.</p></div>
+        <div class="step reveal"><h3>Design & quote</h3><p>You get a layout, material options and a clear, itemized price.</p></div>
+        <div class="step reveal"><h3>Build</h3><p>We handle framing, electrical, finish work and cleanup.</p></div>
+        <div class="step reveal"><h3>Walkthrough</h3><p>We test everything, show you how it works, and hand you the keys.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHEDS & ADUs -->
+  <section id="sheds" class="service">
+    <div class="wrap">
+      <div class="sheds-grid">
+        <div class="reveal">
+          <span class="eyebrow">Also Built by Us</span>
+          <h2 style="margin:12px 0 18px">Custom sheds, backyard offices & ADUs.</h2>
+          <p class="lead">This is where we got our start. Craftsman-style storage sheds, workshops, she-sheds, pool houses, backyard offices and ADUs, all built on-site and made to outlast any big-box shed.</p>
+          <div class="tiers" style="margin-top:26px"><span class="tier"><b>From $2,190</b> installed</span><span class="tier"><b>4×8 to 12×20</b> standard sizes</span><span class="tier"><b>Custom</b> sizes & ADUs</span></div>
+          <a href="#quote" data-project="Shed / ADU" class="btn btn-ghost">Get a Shed Quote →</a>
+        </div>
+        <ul class="feature-list reveal">
+          <li>Storage sheds</li>
+          <li>Workshops</li>
+          <li>Backyard offices</li>
+          <li>She-sheds & pool houses</li>
+          <li>Backyard ADUs & tiny homes</li>
+          <li>Lofts, dormers & workbenches</li>
+          <li>Old shed tear-out & haul-away</li>
+          <li>Authorized Utah ShedCrafters dealer</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR WORK -->
+  <section id="work" class="process">
+    <div class="wrap">
+      <div class="center reveal">
+        <span class="eyebrow">Our Work</span>
+        <h2 style="margin-top:12px">Recent local projects</h2>
+        <p class="lead">Every project is built on-site, plumb, level and square.</p>
+      </div>
+      <div class="gallery reveal">
+        <img src="images/project-1.jpg" alt="Custom backyard building by Carriage House ShedCrafters" loading="lazy">
+        <img src="images/project-2.jpg" alt="Custom backyard building by Carriage House ShedCrafters" loading="lazy">
+        <img src="images/project-3.jpg" alt="Custom backyard building by Carriage House ShedCrafters" loading="lazy">
+        <img src="images/project-4.jpg" alt="Custom backyard building by Carriage House ShedCrafters" loading="lazy">
+        <img src="images/project-5.jpg" alt="Custom backyard building by Carriage House ShedCrafters" loading="lazy">
+        <img src="images/project-6.jpg" alt="Custom backyard building by Carriage House ShedCrafters" loading="lazy">
+        <img src="images/project-7.jpg" alt="Custom backyard building by Carriage House ShedCrafters" loading="lazy">
+        <img src="images/project-8.jpg" alt="Custom backyard building by Carriage House ShedCrafters" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="center reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2 style="margin-top:12px">Common questions</h2>
+      </div>
+      <div class="faq">
+        <details><summary>How much does a custom sauna cost?</summary><p>It depends on size, indoor vs. outdoor, the wood you choose and the heater. After a free consultation we give you an itemized quote, so you know exactly what you're paying for.</p></details>
+        <details><summary>How much space do I need for a golf simulator?</summary><p>As a rough guide, about 10 ft of ceiling height, 12–15 ft of width and 15–18 ft of depth makes a comfortable room. Smaller spaces can often work too. We'll measure and check your full swing during the consult.</p></details>
+        <details><summary>How long does a build take?</summary><p>Most indoor saunas and simulator rooms take one to three weeks once materials arrive. Outdoor saunas can take longer depending on the foundation and weather.</p></details>
+        <details><summary>Do you handle electrical and permits?</summary><p>Yes. We coordinate the electrical work and any permits your project needs, so you don't have to manage separate contractors.</p></details>
+        <details><summary>Can you build a sauna in a backyard shed or outbuilding?</summary><p>Yes. Backyard outbuildings are what we've built for years, so an outdoor sauna house, or a shed with a sauna inside, is right in our wheelhouse. We can also pair a simulator room and a sauna in one project.</p></details>
+        <details><summary>What areas do you serve?</summary><p>We build on-site along the Wasatch Front, from Park City to Grantsville. Not sure if you're in range? Call or text 801-580-7925.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section id="quote" class="quote">
+    <div class="wrap quote-grid">
+      <div class="quote-info reveal">
+        <span class="eyebrow">Free Quote</span>
+        <h2>Tell us about your project.</h2>
+        <p class="lead">Takes less than a minute. You'll hear back directly from an owner, Bryce or Scott, to set up your free consultation.</p>
+        <div class="contact-rows">
+          <a class="contact-row" data-site="phone-link" href="tel:8015807925"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><small>Call or text</small><span data-site="phone">801-580-7925</span></span></a>
+          <a class="contact-row" data-site="email-link" href="mailto:carriagehousesheds@gmail.com"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span><span><small>Email</small><span data-site="email">carriagehousesheds@gmail.com</span></span></a>
+          <div class="contact-row"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-6 8-12a8 8 0 0 0-16 0c0 6 8 12 8 12z"/><circle cx="12" cy="10" r="3"/></svg></span><span><small>Service area</small><span data-site="area">Wasatch Front, Park City to Grantsville</span></span></div>
+        </div>
+      </div>
+
+      <form id="quote-form" class="reveal" novalidate>
+        <div id="form-fields" style="display:grid;gap:18px">
+          <div>
+            <div class="legend">What are you interested in?</div>
+            <div class="choice">
+              <input type="radio" name="project" id="p-sauna" value="Sauna" checked><label for="p-sauna">Sauna</label>
+              <input type="radio" name="project" id="p-golf" value="Golf Simulator"><label for="p-golf">Golf Sim</label>
+              <input type="radio" name="project" id="p-shed" value="Shed / ADU"><label for="p-shed">Shed / ADU</label>
+            </div>
+          </div>
+          <div class="row-2">
+            <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+          </div>
+          <div class="row-2">
+            <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+            <div class="field"><label for="f-zip">ZIP code</label><input id="f-zip" name="zip" inputmode="numeric" autocomplete="postal-code"></div>
+          </div>
+          <div class="field">
+            <label for="f-when">When would you like to start?</label>
+            <select id="f-when" name="timeline">
+              <option>As soon as possible</option>
+              <option>Within 1–3 months</option>
+              <option>3–6 months</option>
+              <option>Just exploring</option>
+            </select>
+          </div>
+          <div class="field"><label for="f-msg">Tell us about your space (optional)</label><textarea id="f-msg" name="message" placeholder="e.g. Unfinished basement, 9 ft ceilings, want room for 4 people"></textarea></div>
+          <button type="submit" class="btn btn-primary">Request My Free Quote →</button>
+          <p class="fine">No spam, no obligation. We'll only use your info to contact you about your project.</p>
+        </div>
+        <div class="success" id="form-success">
+          <h3>Thanks! We got your request.</h3>
+          <p>We'll reach out within one business day. Need us sooner? Call <a data-site="phone-link" href="tel:8015807925"><span data-site="phone">801-580-7925</span></a>.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© <span id="year"></span> <span data-site="name">Carriage House ShedCrafters</span>. Licensed & insured. 8842 S 630 E, Sandy, UT 84070.</div>
+    <nav><a href="#saunas">Saunas</a><a href="#golf">Golf Simulators</a><a href="#sheds">Sheds & ADUs</a><a href="#quote">Free Quote</a></nav>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a data-site="phone-link" href="tel:8015807925" class="btn btn-ghost">Call</a>
+  <a href="#quote" class="btn btn-primary">Free Quote</a>
+</div>
+
+<script>
+  // ===== EDIT YOUR BUSINESS INFO HERE =====
+  const SITE = {
+    name: "Carriage House ShedCrafters",
+    phone: "801-580-7925",
+    email: "carriagehousesheds@gmail.com",
+    area: "Wasatch Front, Park City to Grantsville",
+    // Paste a free Formspree (formspree.io) endpoint here to get leads by email automatically.
+    // Leave blank and the form opens the visitor's email app instead.
+    formEndpoint: ""
+  };
+
+  const digits = SITE.phone.replace(/\D/g, "");
+  document.querySelectorAll('[data-site="name"]').forEach(el => el.textContent = SITE.name);
+  document.querySelectorAll('[data-site="phone"]').forEach(el => el.textContent = SITE.phone);
+  document.querySelectorAll('[data-site="phone-link"]').forEach(el => el.href = "tel:" + digits);
+  document.querySelectorAll('[data-site="email"]').forEach(el => el.textContent = SITE.email);
+  document.querySelectorAll('[data-site="email-link"]').forEach(el => el.href = "mailto:" + SITE.email);
+  document.querySelectorAll('[data-site="area"]').forEach(el => el.textContent = SITE.area);
+  document.querySelector(".nav-phone").textContent = SITE.phone;
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Header background on scroll
+  const header = document.getElementById("top-header");
+  const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 20);
+  onScroll(); window.addEventListener("scroll", onScroll, { passive: true });
+
+  // Mobile menu
+  const menuBtn = document.getElementById("menu-btn"), menu = document.getElementById("mobile-menu");
+  menuBtn.addEventListener("click", () => {
+    const open = menu.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", open);
+  });
+  menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => { menu.classList.remove("open"); menuBtn.setAttribute("aria-expanded", false); }));
+
+  // "Get a Sauna/Simulator Quote" buttons preselect the project type
+  document.querySelectorAll("[data-project]").forEach(btn => btn.addEventListener("click", () => {
+    const input = document.querySelector(`input[name="project"][value="${btn.dataset.project}"]`);
+    if (input) input.checked = true;
+  }));
+
+  // Reveal on scroll
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+  }), { threshold: 0.12 });
+  document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+  // Quote form
+  const form = document.getElementById("quote-form");
+  form.addEventListener("submit", async e => {
+    e.preventDefault();
+    const name = form.name.value.trim(), phone = form.phone.value.trim();
+    form.name.style.borderColor = name ? "" : "#e35d4f";
+    form.phone.style.borderColor = phone ? "" : "#e35d4f";
+    if (!name || !phone) return;
+
+    const data = Object.fromEntries(new FormData(form));
+    if (SITE.formEndpoint) {
+      try {
+        await fetch(SITE.formEndpoint, { method: "POST", headers: { Accept: "application/json" }, body: new FormData(form) });
+      } catch (err) { /* still show success; they can call if needed */ }
+    } else {
+      const body = Object.entries(data).map(([k, v]) => `${k}: ${v}`).join("\n");
+      window.location.href = `mailto:${SITE.email}?subject=${encodeURIComponent("Quote request: " + data.project)}&body=${encodeURIComponent(body)}`;
+    }
+    document.getElementById("form-fields").style.display = "none";
+    document.getElementById("form-success").style.display = "block";
+  });
+</script>
+</body>
+</html>
